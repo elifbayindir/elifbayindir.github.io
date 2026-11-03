@@ -5,12 +5,12 @@
 peer_reviewed:
   - year: 2025
     authors: "An, N., Turp, M., Bayındır, E., Akverdi, Y., Mirza, Z., & Kurnaz, L."
-    title: "Climate Change Hotspots for Turkey"   # TODO(elif): published title is "Climate Change Hotspots for Türkiye"
+    title: "Climate Change Hotspots for Türkiye"
     venue: "International Journal of Climatology"
     volume: "45"
     links: { doi: "https://doi.org/10.1002/joc.8825" }
   - year: 2024
-    authors: "Cinar, N., et al."   # TODO(elif): full author list, Bayındır position
+    authors: "Cinar, N., …, Bayındır, E., …, & Sahiner, T. A. H."   # 17 authors; shortened (Elif's choice)
     title: "Validity and Reliability Study of Online Cognitive Tracking Software (BEYNEX)"
     venue: "Journal of Alzheimer's Disease Reports"
     volume: "8(1)"

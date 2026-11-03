@@ -394,15 +394,13 @@ h2 + .group-heading {
 .links-line {
   display: flex;
   flex-wrap: wrap;
+  gap: 6px 22px;
   list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.links-line li + li::before {
-  content: "·";
-  color: var(--muted);
-  padding: 0 8px;
+  margin: 20px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--rule);
+  font-size: 15px;
+  font-weight: 500;
 }
 
 /* ==========================================================================
