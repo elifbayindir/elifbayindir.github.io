@@ -1,0 +1,50 @@
+title: Elif Bayındır
+description: "Elif Bayındır, quantitative researcher working on uncertainty-aware machine learning for health, climate and energy data."
+url: https://elifbayindir.github.io
+baseurl: ""
+lang: en
+locale: en_GB
+timezone: Europe/Istanbul
+
+author:
+  name: Elif Bayındır
+  email: elif.bayindir1@gmail.com
+  url: https://elifbayindir.github.io
+
+# No theme: github-pages would otherwise add jekyll-theme-primer by default.
+theme: null
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - sources/
+  - tools/
+  - TODO.md
+  - README.md
+  - PORTFOLIO_BRIEF.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/
+  - .jekyll-cache/

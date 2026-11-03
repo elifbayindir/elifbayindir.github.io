@@ -1,0 +1,22 @@
+# Elif's source documents: never publish (theses, papers, posters, manuscripts under review)
+sources/
+
+# Local-only working files
+PORTFOLIO_BRIEF.md
+TODO.md
+tools/SOURCES.md
+
+# Original (unoptimised) images
+tools/originals/
+
+# OS and editor
+.DS_Store
+.claude/
+
+# Jekyll and Bundler
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.bundle/
+vendor/
