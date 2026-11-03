@@ -1,0 +1,8 @@
+# Small methods-demo repositories, shown as one muted line under the project rows.
+
+intro: "reproducible clinical statistics on synthetic data"
+items:
+  - title: "VATS clinical outcomes"
+    url: https://github.com/elifbayindir/psp-vats-clinical-outcomes
+  - title: "Dermatology miRNA analysis"
+    url: https://github.com/elifbayindir/dermatology-mirna-analysis

@@ -99,7 +99,7 @@
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --measure: 720px;
   --gutter: 24px;
-  --date-col: 72px;
+  --date-col: 80px;          /* fits "2024–2026" on one line at 14px */
   color-scheme: light dark;
 }
 
@@ -342,7 +342,155 @@ main.container {
   color: var(--muted);
   font-size: 14px;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
   padding-top: 2px;
+}
+
+.pub .muted {
+  white-space: nowrap;
+}
+
+.date-list > li > div > :last-child {
+  margin-bottom: 0;
+}
+
+.group-heading {
+  font-size: 17px;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+h2 + .group-heading {
+  margin-top: 0;
+}
+
+.label {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Home: intro
+   ========================================================================== */
+
+.intro h1 {
+  margin-top: 8px;
+}
+
+.intro-body.has-photo {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.links-line {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links-line li + li::before {
+  content: "·";
+  color: var(--muted);
+  padding: 0 8px;
+}
+
+/* ==========================================================================
+   Home: projects
+   ========================================================================== */
+
+.project-list {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.project-row {
+  margin-bottom: 28px;
+}
+
+.project-row.has-thumb {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 24px;
+  align-items: start;
+}
+
+.project-row h3 a {
+  color: var(--heading);
+  text-decoration-color: var(--rule);
+}
+
+.project-row h3 a:hover {
+  text-decoration-color: var(--accent);
+}
+
+.project-row p {
+  margin: 0;
+}
+
+.project-row p.muted {
+  margin-top: 2px;
+}
+
+.project-thumb img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+#projects > p.muted {
+  margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   Home: publications and news
+   ========================================================================== */
+
+.pub-title {
+  color: var(--heading);
+}
+
+.older-news summary {
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   Home: gallery
+   ========================================================================== */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.gallery p.muted {
+  margin: 4px 0 0;
 }
 
 /* ==========================================================================
@@ -365,6 +513,28 @@ main.container {
 
   .site-header nav ul {
     justify-content: center;
+  }
+
+  .intro-body.has-photo {
+    display: block;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .project-row.has-thumb {
+    display: block;
+  }
+
+  .project-thumb {
+    display: none;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -399,5 +569,10 @@ main.container {
   .skip-link,
   .gallery {
     display: none;
+  }
+
+  .pub a[href^="http"]::after {
+    content: " " attr(href);
+    word-break: break-all;
   }
 }

@@ -1,6 +1,165 @@
 ---
 layout: default
 ---
-<section id="about">
-  <h1>{{ site.title }}</h1>
+{%- assign profile = site.data.profile -%}
+{%- assign photo = site.static_files | where: "path", profile.photo | first -%}
+
+<section id="about" class="intro">
+  <h1>{{ profile.name }}</h1>
+  <div class="intro-body{% if photo %} has-photo{% endif %}">
+    {%- if photo %}
+    <img class="profile-photo" src="{{ profile.photo | relative_url }}" alt="{{ profile.photo_alt }}" width="160" height="200">
+    {%- endif %}
+    <div>
+      {{ profile.about | markdownify }}
+      <ul class="links-line">
+        {%- if profile.cv %}
+        <li><a href="{{ profile.cv | relative_url }}" target="_blank" rel="noopener">CV</a></li>
+        {%- endif %}
+        {%- for link in profile.links %}{% if link.url %}
+        <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+        {%- endif %}{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  {% include section-heading.html title="Selected projects" %}
+  {%- assign projects = site.projects | sort: "order" -%}
+  {%- assign featured = projects | where: "featured", true -%}
+  {%- assign more = projects | where_exp: "p", "p.featured != true" -%}
+  <ul class="project-list">
+    {%- for project in featured %}
+    {% include project-row.html project=project %}
+    {%- endfor %}
+  </ul>
+
+  {%- if more.size > 0 %}
+  <p class="muted"><span class="label">More projects:</span>
+    {% for project in more %}<a href="{{ project.url | relative_url }}">{{ project.title }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}
+  </p>
+  {%- endif %}
+
+  {%- if site.data.earlier_research.size > 0 %}
+  <p class="muted"><span class="label">Earlier research:</span>
+    {% for item in site.data.earlier_research %}{{ item | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% unless forloop.last %}; {% endunless %}{% endfor %}.
+  </p>
+  {%- endif %}
+
+  {%- assign demos = site.data.demos -%}
+  {%- if demos.items.size > 0 %}
+  <p class="muted"><span class="label">Methods demos:</span>
+    {{ demos.intro }}: {% for demo in demos.items %}<a href="{{ demo.url }}">{{ demo.title }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}.
+  </p>
+  {%- endif %}
+</section>
+
+<section id="publications">
+  {% include section-heading.html title="Publications" %}
+  {%- assign pubs = site.data.publications -%}
+
+  {%- if pubs.peer_reviewed.size > 0 %}
+  <h3 class="group-heading">Peer-reviewed</h3>
+  <ol class="date-list">
+    {%- for pub in pubs.peer_reviewed %}
+    {% include publication.html pub=pub %}
+    {%- endfor %}
+  </ol>
+  {%- endif %}
+
+  {%- if pubs.under_review.size > 0 %}
+  <h3 class="group-heading">Under review</h3>
+  <ol class="date-list">
+    {%- for pub in pubs.under_review %}
+    {% include publication.html pub=pub under_review=true %}
+    {%- endfor %}
+  </ol>
+  {%- endif %}
+
+  {%- if site.data.presentations.size > 0 %}
+  <h3 class="group-heading">Presentations</h3>
+  <ul class="date-list">
+    {%- for talk in site.data.presentations %}
+    <li class="pub">
+      <span class="date">{{ talk.year }}</span>
+      <div>
+        <span class="pub-title">{{ talk.title | escape }}.</span>
+        {{ talk.type }}, <em>{{ talk.event | escape }}</em>. <span class="muted">{{ talk.role }}</span>
+        {%- for link in talk.links %}{% if link[1] %} <a href="{{ link[1] }}">[{% if link[0] == 'doi' %}DOI{% else %}{{ link[0] }}{% endif %}]</a>{% endif %}{% endfor %}
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</section>
+
+<section id="news">
+  {% include section-heading.html title="News" %}
+  {%- assign news = site.data.news -%}
+  <ul class="date-list">
+    {%- for item in news limit: 8 %}
+    {% include news-item.html item=item %}
+    {%- endfor %}
+  </ul>
+  {%- if news.size > 8 %}
+  <details class="older-news">
+    <summary>Older news</summary>
+    <ul class="date-list">
+      {%- for item in news offset: 8 %}
+      {% include news-item.html item=item %}
+      {%- endfor %}
+    </ul>
+  </details>
+  {%- endif %}
+</section>
+
+<section id="experience">
+  {% include section-heading.html title="Experience" %}
+  {%- for group in site.data.experience %}
+  {%- if group.entries.size > 0 %}
+  <h3 class="group-heading">{{ group.title }}</h3>
+  <ul class="date-list">
+    {%- for entry in group.entries %}
+    <li><span class="date">{{ entry.dates }}</span><div>{{ entry.text }}</div></li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+  {%- endfor %}
+
+  {%- if site.data.education.size > 0 %}
+  <h3 class="group-heading">Education</h3>
+  <ul class="date-list">
+    {%- for edu in site.data.education %}
+    <li>
+      <span class="date">{{ edu.year }}</span>
+      <div>
+        {{ edu.degree }}.
+        {%- if edu.thesis %} Thesis: <em>{{ edu.thesis }}</em>.{% endif %}
+        {%- if edu.supervisors %} {% if edu.supervisors contains "," %}Supervisors{% else %}Supervisor{% endif %}: {{ edu.supervisors }}.{% endif %}
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</section>
+
+<section id="outside-research">
+  {% include section-heading.html title="Outside research" %}
+  {%- assign gallery = site.data.gallery -%}
+  {%- if gallery.intro %}
+  <p>{{ gallery.intro }}</p>
+  {%- endif %}
+  {%- if gallery.photos.size > 0 %}
+  <ul class="gallery">
+    {%- for photo in gallery.photos %}
+    <li>
+      <a href="{{ '/assets/img/gallery/' | append: photo.file | relative_url }}">
+        <img src="{{ '/assets/img/gallery/thumbs/' | append: photo.file | relative_url }}" alt="{{ photo.alt | escape }}" width="800" height="1000" loading="lazy" decoding="async">
+      </a>
+      {%- if photo.caption %}<p class="muted">{{ photo.caption }}</p>{% endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
 </section>

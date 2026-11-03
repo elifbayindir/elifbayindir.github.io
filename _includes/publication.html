@@ -1,0 +1,13 @@
+{%- assign pub = include.pub -%}
+{%- assign me = '<strong>E. Bayındır</strong>' -%}
+{%- assign authors = pub.authors | escape | replace: 'Bayındır, E.', me | replace: 'Bayindir, E.', me -%}
+<li class="pub">
+  <span class="date">{{ pub.year }}</span>
+  <div>
+    {{ authors }}
+    <span class="pub-title">{{ pub.title | escape }}.</span>
+    <em>{{ pub.venue | escape }}</em>{% if pub.volume %}, {{ pub.volume }}{% endif %}{% if pub.pages %}, {{ pub.pages }}{% endif %}.
+    {%- if include.under_review %} <span class="muted">Under review</span>{% endif %}
+    {%- for link in pub.links %}{% if link[1] %} <a href="{{ link[1] }}">[{% if link[0] == 'doi' %}DOI{% else %}{{ link[0] }}{% endif %}]</a>{% endif %}{% endfor %}
+  </div>
+</li>

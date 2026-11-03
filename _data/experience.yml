@@ -1,0 +1,37 @@
+# Groups in display order; one line per entry, newest first within each group.
+
+- title: Research
+  entries:
+    - dates: "2024–2026"
+      text: "Graduate researcher, Control and Intelligent Systems Laboratory, Boğaziçi University"
+    - dates: "2023–2024"
+      text: "Graduate researcher, Özonder Laboratory"
+    - dates: "2020–2023"
+      text: "Graduate researcher, iklimBU, Center for Climate Change and Policy Studies"
+    - dates: "2018–2020"
+      text: "Undergraduate researcher, KAHVElab, Boğaziçi University"
+    - dates: "2017–2019"
+      text: "Undergraduate researcher, High Energy Astrophysics Laboratory"
+
+- title: Funded projects
+  entries:
+    - dates: "2025–2026"
+      text: "Predicting Cognitive Decline and Detecting Anomalies, Boğaziçi University BAP grant 20451, researcher; wrote the funded proposal"
+    - dates: "2023–2025"
+      text: "Stable Renewable Energy Production Optimization with Wind and Hydrogen Hybrid Source Usage, Boğaziçi University grant 23AYOKADP2, researcher"
+
+- title: Industry
+  entries:
+    - dates: "2022–2026"
+      text: "Co-founder, Data Science and R&D, Beynex"
+    - dates: "2020–2021"
+      text: "Head of Operations and Data Management, Mentor Özel Ders"
+
+- title: Teaching
+  entries:
+    - dates: "2023"
+      text: "Teaching assistant, Data Scientist Path Bootcamp, Miuul"
+    - dates: "2020–2021"
+      text: "Teaching assistant, Data Science for Social Impact Bootcamp, Kodluyoruz"
+    - dates: "2020"
+      text: "Teaching assistant, Data Science 102 Bootcamp, Kodluyoruz"

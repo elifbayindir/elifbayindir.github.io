@@ -1,0 +1,6 @@
+{%- assign item = include.item -%}
+{%- assign d = item.date | append: '' -%}
+<li>
+  <span class="date">{% if d.size > 4 %}{{ d | append: '-01' | date: '%b %Y' }}{% else %}{{ d }}{% endif %}</span>
+  <div>{% if item.link %}<a href="{{ item.link | relative_url }}">{{ item.text }}</a>{% else %}{{ item.text }}{% endif %}</div>
+</li>

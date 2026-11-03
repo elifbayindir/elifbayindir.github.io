@@ -1,0 +1,21 @@
+# Newest first: add new items at the top.
+# date: "YYYY-MM" (shown as "Sep 2026") or "YYYY" (shown as "2025").
+# link is optional.
+
+- date: "2026-09"
+  text: "Presented the Conversion Decision Router at the GenAI Bootcamp."
+  link: /projects/conversion-decision-router/
+- date: "2026-09"
+  text: "Completed my MSc in Data Science and Artificial Intelligence at Boğaziçi University."
+- date: "2026"        # TODO(elif): month of submission
+  text: "First-author paper on calibrated uncertainty in cognitive forecasting submitted to IEEE JBHI."
+- date: "2025-11"
+  text: "Started the BAP-funded project on predicting cognitive decline, based on my own research proposal."
+- date: "2025"        # TODO(elif): month
+  text: "Presented a poster on decarbonising cognitive care at the International School of Political Ecology."
+- date: "2025"        # TODO(elif): month
+  text: "Paper on climate change hotspots for Turkey published in the International Journal of Climatology."
+- date: "2025"        # TODO(elif): month
+  text: "Two co-authored contributions at the National Neurology and National Alzheimer's congresses."
+- date: "2023-08"
+  text: "Completed my MSc in Computational Science and Engineering."

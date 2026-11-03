@@ -1,0 +1,29 @@
+name: Elif Bayındır
+photo: /assets/img/profile.jpg
+photo_alt: "Portrait of Elif Bayındır"
+
+# Markdown. Links are added below the text via `about_links`.
+about: |
+  I am a quantitative researcher working on machine learning that knows what it does not know. My recent work evaluates forecasting models, including tabular foundation models, on longitudinal digital cognitive assessments, with a focus on calibrated uncertainty rather than point accuracy alone. I am interested in how such evaluations can guide efficient and trustworthy use of AI, especially for organisations with limited compute and sensitive data.
+
+  I hold two MSc degrees from [Boğaziçi University](https://bogazici.edu.tr/en), in Data Science and Artificial Intelligence (2026) and Computational Science and Engineering (2023), and a BSc in Physics (2020). Along the way I worked on climate extremes with CMIP6 simulations, wind–hydrogen energy optimisation and battery health forecasting. I co-founded Beynex, a digital cognitive health platform, and led its data science and R&D from 2022 to 2026.
+# TODO(elif): confirm the Beynex URL (https://beynex.com?); then link "Beynex" above as [Beynex](URL).
+
+# Public CV without phone number or referee contact details.
+# TODO(elif): add assets/pdf/Elif_Bayindir_CV.pdf, then set: cv: /assets/pdf/Elif_Bayindir_CV.pdf
+cv:
+
+# Links line under the about text. Items without a url are not shown.
+links:
+  - label: Email
+    url: "mailto:elif.bayindir1@gmail.com"
+  - label: GitHub
+    url: https://github.com/elifbayindir
+  - label: ORCID
+    url: https://orcid.org/0000-0002-7440-621X
+  - label: Google Scholar
+    url:            # not yet
+  - label: ResearchGate
+    url:            # TODO(elif): ResearchGate profile URL
+  - label: LinkedIn
+    url: https://www.linkedin.com/in/elif-bayindir

@@ -1,0 +1,23 @@
+# Newest first. links is optional (doi, slides, poster).
+
+- year: 2025
+  type: Poster
+  title: "Decarbonising Cognitive Care: Remote Monitoring, Accessibility, and Sustainable Health Systems"
+  event: "International School of Political Ecology"
+  role: "Presenting author"
+- year: 2025
+  type: Poster
+  title: "Evaluating the Impact of Digital Cognitive Monitoring in a Phase 4 Clinical Study of Alzheimer's Disease Treatments"
+  event: "61st National Neurology Congress"
+  role: "Co-author"
+- year: 2025
+  type: Presentation
+  title: "Online Long-Term Symptom Monitoring in Advanced Dementia Patients"
+  event: "15th National Alzheimer's Congress"
+  role: "Co-author"
+- year: 2019
+  type: Poster
+  title: "XMM-Newton Study of Galaxy Cluster Abell 780"
+  event: "Conference of High Energy Astrophysics"
+  role: "Co-author and presenter"
+  links: { doi: "https://doi.org/10.13140/RG.2.2.14390.55360" }

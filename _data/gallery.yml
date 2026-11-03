@@ -1,0 +1,9 @@
+# TODO(elif): sentence above the gallery is a draft; confirm or rewrite.
+intro: "Outside research I row and take photographs. A few frames:"
+
+# 10–20 photos. Run tools/optimise_images.py first, then add one entry per photo:
+#   - file: example.jpg          # in assets/img/gallery/ (thumb: assets/img/gallery/thumbs/)
+#     alt: "What the photo shows"
+#     caption: "Optional caption"
+# TODO(elif): provide photos and alt text.
+photos: []

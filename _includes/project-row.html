@@ -1,0 +1,13 @@
+{%- assign p = include.project -%}
+<li class="project-row{% if p.thumbnail %} has-thumb{% endif %}">
+  <div>
+    <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+    <p>{{ p.summary }}</p>
+    <p class="muted">{{ p.meta }}</p>
+  </div>
+  {%- if p.thumbnail %}
+  <a class="project-thumb" href="{{ p.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ p.thumbnail | relative_url }}" alt="" width="120" height="80" loading="lazy" decoding="async">
+  </a>
+  {%- endif %}
+</li>

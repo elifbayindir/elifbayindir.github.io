@@ -1,0 +1,43 @@
+# Elif's name is shown in bold automatically ("Bayındır, E." or "Bayindir, E." is displayed as "E. Bayındır").
+# links: only keys with real URLs (doi, paper, code, slides, poster).
+# When a paper is accepted: move it from under_review to peer_reviewed and add its doi.
+
+peer_reviewed:
+  - year: 2025
+    authors: "An, N., Turp, M., Bayındır, E., Akverdi, Y., Mirza, Z., & Kurnaz, L."
+    title: "Climate Change Hotspots for Turkey"   # TODO(elif): published title is "Climate Change Hotspots for Türkiye"
+    venue: "International Journal of Climatology"
+    volume: "45"
+    links: { doi: "https://doi.org/10.1002/joc.8825" }
+  - year: 2024
+    authors: "Cinar, N., et al."   # TODO(elif): full author list, Bayındır position
+    title: "Validity and Reliability Study of Online Cognitive Tracking Software (BEYNEX)"
+    venue: "Journal of Alzheimer's Disease Reports"
+    volume: "8(1)"
+    pages: "163–171"
+    links: { doi: "https://doi.org/10.3233/ADR-230117" }
+  - year: 2023
+    authors: "Bilgin, B., Bayındır, E., Demiralay, Z., et al."
+    title: "Human Comfort Analysis for Turkey's Coastal Tourism in a Changing Climate"
+    venue: "Theoretical and Applied Climatology"
+    volume: "154"
+    pages: "945–958"
+    links: { doi: "https://doi.org/10.1007/s00704-023-04613-y" }
+
+under_review:
+  - year: 2026
+    authors: "Bayındır, E., Arslan, S. Ş., & Atam, E."
+    title: "Point Accuracy Saturation and Calibrated Uncertainty in Longitudinal Digital Cognitive Forecasting"
+    venue: "IEEE Journal of Biomedical and Health Informatics"
+    first_author: true
+    links: {}
+  - year: 2026
+    authors: "An, N., Turp, M., Bayındır, E., Demiralay, Z., & Avci, C."
+    title: "Operational Performance and Scaling Constraints of a Wind-Hydrogen Hybrid Energy System: Evidence from a Real Pilot Installation"
+    venue: "Energy Reports"
+    links: {}
+  - year: 2026
+    authors: "Cinar, N., Bozdemir, M., Bayındır, E., & Sahiner, T. A. H."
+    title: "Evaluation of the Effects of Online Cognitive Tracking on Outcomes in Patients with Alzheimer's Disease Receiving Donepezil, Memantine, or Combination Therapy"
+    venue: "Alzheimer's & Dementia"
+    links: {}
