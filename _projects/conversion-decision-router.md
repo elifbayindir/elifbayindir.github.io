@@ -8,7 +8,6 @@ status: "Open-source prototype, presented at the GenAI Bootcamp (September 2026)
 order: 2
 featured: true
 repo: https://github.com/elifbayindir/conversion-quality-router
-thumbnail: /assets/img/projects/conversion-decision-router/thumb.jpg
 ---
 
 ## Question
