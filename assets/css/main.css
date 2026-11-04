@@ -493,13 +493,19 @@ h2 + .group-heading {
 
 /* Photo viewer (gallery.js); never shown without JavaScript */
 
+/* The photo is as large as fits the screen in one view: no scrolling, a thin backdrop margin. */
 .photo-viewer {
   padding: 0;
   border: 0;
-  background: var(--bg);
-  max-width: min(90vw, 1100px);
-  max-height: 88vh;
-  overflow: visible;
+  margin: auto;
+  background: transparent;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+body:has(.photo-viewer[open]) {
+  overflow: hidden;
 }
 
 .photo-viewer::backdrop {
@@ -508,8 +514,9 @@ h2 + .group-heading {
 
 .photo-viewer img {
   display: block;
-  max-width: min(90vw, 1100px);
-  max-height: 88vh;
+  max-width: 96vw;
+  max-height: 94vh;
+  max-height: 94dvh;
   width: auto;
   height: auto;
 }
