@@ -21,6 +21,8 @@ Can forecasting and anomaly detection on repeated digital cognitive assessments 
 
 The seven procedures were persistence, simple exponential smoothing, random forest, XGBoost, LightGBM, and a Compact and an Extended configuration of TabPFN-2. Each forecast the platform's composite performance score 1, 3, 5, 15 and 30 assessment cycles ahead, roughly one week to six months. An expanding-window design meant that every forecast used only information available at its origin, and all procedures were scored on the same users and target observations. Point error was measured as mean absolute error, prediction intervals by empirical coverage and width, and the full predictive distribution by the continuous ranked probability score.
 
+{% include figure.html src="/assets/img/projects/cognitive-forecasting/rolling-origin-protocol.png" width="1600" height="735" alt="Diagram of the expanding-window rolling-origin protocol: for horizons of 1, 3, 5, 15 and 30 cycles, a bar shows the history available at the forecast origin, a grey segment the forecast horizon, and a circle the held-out target." caption="Expanding-window rolling-origin protocol. Each row shows the first valid forecast for one horizon: the history available at the origin, the forecast horizon and the held-out target. From my MSc thesis (2026), Figure 2.3." %}
+
 ## What I found
 
 The strongest models converged to almost the same point error, but their uncertainty estimates differed clearly. TabPFN-2 stayed close to the target coverage without any training or tuning on this data. Point accuracy alone could not distinguish good models; a pretrained foundation model competed with tuned models.
