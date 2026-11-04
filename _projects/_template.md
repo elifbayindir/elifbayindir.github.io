@@ -1,7 +1,7 @@
 ---
 # Copy this file to _projects/<slug>.md (no leading underscore). The page appears at /projects/<slug>/.
 title: "Project title"
-summary: "One sentence, shown on the home page and as the meta description."
+description: "One sentence, shown on the home page and as the meta description."
 meta: "Keyword · Keyword · Keyword"
 dates: "2026"
 role: "Sole author"

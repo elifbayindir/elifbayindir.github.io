@@ -1,6 +1,6 @@
 ---
 title: "Conversion Decision Router"
-summary: "A decision-support prototype that turns a calibrated purchase probability into one of three routes and sends uncertain cases to a person."
+description: "A decision-support prototype that turns a calibrated purchase probability into one of three routes and sends uncertain cases to a person."
 meta: "PyTorch · LLM agent · n8n · FastAPI"
 dates: "September–October 2026"
 role: "Sole author"

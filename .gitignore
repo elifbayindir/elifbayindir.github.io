@@ -9,6 +9,8 @@ tools/SOURCES.md
 # Original (unoptimised) images
 tools/originals/
 Website_Photos/
+tools/.cache/
+__pycache__/
 
 # OS and editor
 .DS_Store

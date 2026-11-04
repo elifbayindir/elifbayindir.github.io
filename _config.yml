@@ -32,13 +32,17 @@ defaults:
       type: projects
     values:
       layout: project
+      seo:
+        type: WebPage
   - scope:
       path: ""
     values:
       layout: default
+      image: /assets/img/og-image.png
 
 exclude:
   - sources/
+  - Website_Photos/
   - tools/
   - TODO.md
   - README.md

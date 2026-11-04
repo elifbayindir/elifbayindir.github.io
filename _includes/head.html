@@ -1,6 +1,32 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+{% seo title=false %}
 <link rel="preload" href="{{ '/assets/fonts/source-serif-4-latin-500-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ '/assets/fonts/inter-latin-400-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ '/favicon-32.png' | relative_url }}" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+{%- if page.url == '/' %}
+{%- assign profile = site.data.profile %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ profile.name | jsonify }},
+  "url": {{ site.url | append: '/' | jsonify }},
+  "email": "mailto:elif.bayindir1@gmail.com",
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Boğaziçi University", "url": "https://bogazici.edu.tr/en" },
+  "sameAs": [
+    {%- assign same_as = "" | split: "" -%}
+    {%- for link in profile.links -%}
+      {%- if link.url and link.label != "Email" -%}{%- assign same_as = same_as | push: link.url -%}{%- endif -%}
+    {%- endfor -%}
+    {%- for url in same_as %}
+    {{ url | jsonify }}{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>
+{%- endif %}

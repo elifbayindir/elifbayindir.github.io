@@ -2,7 +2,7 @@
 <li class="project-row{% if p.thumbnail %} has-thumb{% endif %}">
   <div>
     <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
-    <p>{{ p.summary }}</p>
+    <p>{{ p.description }}</p>
     <p class="muted">{{ p.meta }}</p>
   </div>
   {%- if p.thumbnail %}
