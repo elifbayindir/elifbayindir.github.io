@@ -1,9 +1,45 @@
-# TODO(elif): sentence above the gallery is a draft; confirm or rewrite.
+# Sentence above the gallery (confirmed by Elif).
 intro: "Outside research I row and take photographs. A few frames:"
 
 # 10–20 photos. Run tools/optimise_images.py first, then add one entry per photo:
 #   - file: example.jpg          # in assets/img/gallery/ (thumb: assets/img/gallery/thumbs/)
 #     alt: "What the photo shows"
 #     caption: "Optional caption"
-# TODO(elif): provide photos and alt text.
-photos: []
+#     position: "right center"   # optional: which part stays visible in the 4:5 tile
+photos:
+  - file: 1.jpg
+    alt: "A single white flower with six petals among thin green leaves in a planter."
+  - file: 2.jpg
+    alt: "A small pond surrounded by trees and lawns in a green park."
+  - file: 3.jpg
+    alt: "Sunset over the sea seen from a rocky shore, with a cat sitting in silhouette on the rocks."
+  - file: 4.jpg
+    alt: "A crowd of Egyptian geese, ducks and pigeons on a sandy patch of ground."
+  - file: 5.jpg
+    alt: "A cluster of purple flowers with white edges hanging over a stone wall."
+  - file: 6.jpg
+    alt: "A misty grey sea behind green shrubs and a bare tree on a hillside."
+  - file: 7.jpg
+    alt: "The white wake of a ferry on grey water, seen over the railing with a life ring."
+  - file: 8.jpg
+    alt: "A black and white cat lying on marble steps beside food bowls."
+  - file: 9.jpg
+    alt: "Red poppies among tall green grass."
+  - file: 10.jpg
+    alt: "A tabby and white cat wearing a red bandana, standing on a pavement."
+  - file: 11.jpg
+    alt: "Dense green strawberry leaves with small unripe fruits."
+  - file: 12.jpg
+    alt: "A gull standing on the wet roof of a car, with trees and a cloudy sky behind it."
+  - file: 13.jpg
+    alt: "Black and white street art of a screaming face sprayed on a beige wall."
+  - file: 14.jpg
+    alt: "A pink hibiscus flower with a dark red centre among green leaves."
+  - file: 15.jpg
+    alt: "A small white dog with a pink lead lying on a sunlit floor, looking at the camera."
+  - file: 16.jpg
+    alt: "A tabby cat dozing with its eyes closed, resting its paws on a metal bracket."
+  - file: 17.jpg
+    alt: "View from above of a wide blue strait with a sailing boat and waterfront houses along the shore."
+  - file: 18.jpg
+    alt: "A black line drawing of a smiling face on a white wall, next to a barred window and a rusty metal box."

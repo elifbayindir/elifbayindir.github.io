@@ -491,6 +491,51 @@ h2 + .group-heading {
   margin: 4px 0 0;
 }
 
+/* Photo viewer (gallery.js); never shown without JavaScript */
+
+.photo-viewer {
+  padding: 0;
+  border: 0;
+  background: var(--bg);
+  max-width: min(90vw, 1100px);
+  max-height: 88vh;
+  overflow: visible;
+}
+
+.photo-viewer::backdrop {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.photo-viewer img {
+  display: block;
+  max-width: min(90vw, 1100px);
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+}
+
+.photo-viewer form {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  margin: 0;
+}
+
+.photo-viewer-close {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
+  font: 400 24px/36px var(--font-sans);
+  cursor: pointer;
+}
+
+.photo-viewer-close:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 /* ==========================================================================
    Project pages
    ========================================================================== */

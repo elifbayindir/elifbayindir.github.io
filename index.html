@@ -155,11 +155,17 @@ layout: default
     {%- for photo in gallery.photos %}
     <li>
       <a href="{{ '/assets/img/gallery/' | append: photo.file | relative_url }}">
-        <img src="{{ '/assets/img/gallery/thumbs/' | append: photo.file | relative_url }}" alt="{{ photo.alt | escape }}" width="800" height="1000" loading="lazy" decoding="async">
+        <img src="{{ '/assets/img/gallery/thumbs/' | append: photo.file | relative_url }}" alt="{{ photo.alt | escape }}" width="800" height="1000" loading="lazy" decoding="async"{% if photo.position %} style="object-position: {{ photo.position }}"{% endif %}>
       </a>
       {%- if photo.caption %}<p class="muted">{{ photo.caption }}</p>{% endif %}
     </li>
     {%- endfor %}
   </ul>
+  {%- comment %} Optional viewer: without JavaScript each tile simply opens the full image. {% endcomment %}
+  <dialog class="photo-viewer" aria-label="Photo">
+    <form method="dialog"><button class="photo-viewer-close" aria-label="Close">×</button></form>
+    <img alt="">
+  </dialog>
+  <script src="{{ '/assets/js/gallery.js' | relative_url }}" defer></script>
   {%- endif %}
 </section>

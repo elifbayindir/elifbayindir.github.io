@@ -8,6 +8,7 @@ tools/SOURCES.md
 
 # Original (unoptimised) images
 tools/originals/
+Website_Photos/
 
 # OS and editor
 .DS_Store
