@@ -492,6 +492,52 @@ h2 + .group-heading {
 }
 
 /* ==========================================================================
+   Project pages
+   ========================================================================== */
+
+.project-header {
+  margin-bottom: 8px;
+}
+
+.project-header h1 {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.project-header p.muted {
+  margin-bottom: 4px;
+}
+
+.project h2 {
+  margin-top: 40px;
+}
+
+.project ul {
+  padding-left: 1.2em;
+}
+
+.project li {
+  margin-bottom: 6px;
+}
+
+figure {
+  margin: 24px 0 28px;
+}
+
+figure img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+}
+
+figcaption {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 

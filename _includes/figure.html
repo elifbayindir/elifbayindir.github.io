@@ -1,0 +1,7 @@
+{%- assign src = include.src | relative_url -%}
+<figure>
+  <a href="{{ src }}"><img src="{{ src }}" alt="{{ include.alt | escape }}" width="{{ include.width }}" height="{{ include.height }}" loading="lazy" decoding="async"></a>
+  {%- if include.caption %}
+  <figcaption>{{ include.caption }}</figcaption>
+  {%- endif %}
+</figure>

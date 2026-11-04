@@ -2,7 +2,18 @@
 layout: default
 ---
 <article class="project">
-  <h1>{{ page.title }}</h1>
-  <p class="muted">{{ page.dates }} · {{ page.role }} · {{ page.status }}</p>
+  <header class="project-header">
+    <h1>{{ page.title }}</h1>
+    <p class="muted">
+      {%- assign meta = "" | split: "" -%}
+      {%- if page.dates %}{% assign meta = meta | push: page.dates %}{% endif -%}
+      {%- if page.role %}{% assign meta = meta | push: page.role %}{% endif -%}
+      {%- if page.status %}{% assign meta = meta | push: page.status %}{% endif -%}
+      {{ meta | join: " · " }}
+    </p>
+    {%- if page.supervisors %}
+    <p class="muted">Supervisors: {{ page.supervisors }}</p>
+    {%- endif %}
+  </header>
   {{ content }}
 </article>

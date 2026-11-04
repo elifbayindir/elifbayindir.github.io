@@ -1,7 +1,7 @@
 {%- assign home = '/' | relative_url -%}
 <header class="site-header container{% if page.url == '/' %} is-home{% endif %}">
   {%- unless page.url == '/' %}
-  <a class="site-name" href="{{ home }}">{{ site.title }}</a>
+  <a class="site-name" href="{{ home }}">← {{ site.title }}</a>
   {%- endunless %}
   <nav aria-label="Main">
     <ul>
